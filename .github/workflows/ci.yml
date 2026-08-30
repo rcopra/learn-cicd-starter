@@ -15,6 +15,3 @@ jobs:
 
         name: Run test suite
         run: go test ./...
-
-      - name: Force Failure
-        run: (exit 0)
