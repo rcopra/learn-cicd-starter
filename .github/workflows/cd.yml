@@ -20,3 +20,9 @@ jobs:
 
       - name: Build Prod Script
         run: ./scripts/buildprod.sh
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v3
+
+      - name: Deploy to Google Cloud
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-507313/notely-ar-repo/notely:latest
